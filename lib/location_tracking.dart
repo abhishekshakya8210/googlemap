@@ -11,7 +11,7 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
-  LatLng myCurrentLocation = LatLng(27.3826, 79.5970); // ✅ Farrukhabad
+  LatLng myCurrentLocation = LatLng(27.3826, 79.5970); 
   late GoogleMapController googleMapController;
   Set<Marker> marker = {};
 
@@ -34,7 +34,7 @@ class _MapScreenState extends State<MapScreen> {
             position: myCurrentLocation,
             draggable: true,
             onDragEnd: (value) {},
-            icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed), // ✅ red marker
+            icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
             infoWindow: InfoWindow(
               title: 'Farrukhabad',
               snippet: 'This is Farrukhabad location',
@@ -58,7 +58,7 @@ class _MapScreenState extends State<MapScreen> {
             marker.add(Marker(
               markerId: MarkerId('this is my location'),
               position: LatLng(position.latitude, position.longitude),
-              icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed), // ✅ red marker
+              icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed), 
             ));
           });
         },
